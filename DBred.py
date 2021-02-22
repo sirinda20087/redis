@@ -35,7 +35,7 @@ def DELETE_key(Key):
     return jsonify(result)
 
  # Post Key
-@app.route('/Car',methods=['POST'])
+@app.route('/<Key>',methods=['POST'])
 def Post_key():
     category = request.json['catagory']
     size = request.json['size']
@@ -50,7 +50,7 @@ def Post_key():
     return jsonify(data)
 
 # update Key
-@app.route('/Car/<Key>',methods=['PUT'])
+@app.route('/<Key>',methods=['PUT'])
 def PUT_key(Key):
     
     category = request.json['catagory']
